@@ -10,7 +10,8 @@
     "post-robot": "^9.0.36",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "rxjs": "^6.6.2"
   },
   "scripts": {
     "start": "set PORT=3001 && react-scripts start",
