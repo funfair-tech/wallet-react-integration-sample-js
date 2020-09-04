@@ -14,6 +14,7 @@ class WalletLeader extends Component {
               is-fun-wallet="true"
               is-leader="true"
               onLoad={this.yourLeaderInstanceLoadFunction}
+              frameBorder="0"
             ></iframe>
           </div>
         </div>
