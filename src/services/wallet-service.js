@@ -1,3 +1,4 @@
+import Web3 from 'web3';
 import { isAuthenticated$, restoreAuthenticationTaskCompleted$ } from './store';
 
 export function registerEventListeners() {
@@ -24,4 +25,39 @@ export function login() {
 export function logout() {
   window.funwallet.sdk.logout();
   isAuthenticated$.next(false);
+}
+
+let web3 = undefined;
+
+function web3Instance() {
+  if (web3) {
+    return web3;
+  }
+
+  return (web3 = new Web3(window.funwallet.sdk.ethereum));
+}
+
+export async function signAMessage(messageText) {
+  const ethereumAddress = await window.funwallet.sdk.ethereumAddress();
+
+  const result = await web3Instance().eth.personal.sign(
+    messageText,
+    ethereumAddress
+  );
+
+  return result;
+}
+
+export async function sendTransaction(tx) {
+  const ethereumAddress = await window.funwallet.sdk.ethereumAddress();
+  tx.from = ethereumAddress;
+
+  web3Instance()
+    .eth.sendTransaction(tx)
+    .once('transactionHash', (transactionHash) => {
+      console.log('Transaction hash test app', transactionHash);
+    })
+    .on('error', async (error) => {
+      console.log(error.message, error);
+    });
 }

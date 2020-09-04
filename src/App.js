@@ -5,7 +5,12 @@ import {
   isAuthenticated$,
   restoreAuthenticationTaskCompleted$,
 } from './services/store';
-import { login, logout } from './services/wallet-service';
+import {
+  login,
+  logout,
+  sendTransaction,
+  signAMessage,
+} from './services/wallet-service';
 import WalletFollower from './Wallet-Follower';
 
 class App extends Component {
@@ -13,7 +18,10 @@ class App extends Component {
     super();
     this.state = { isLoggedIn: false, loading: true };
     isAuthenticated$.subscribe((value) => {
-      this.setState({ isLoggedIn: value });
+      this.setState({
+        isLoggedIn: value,
+        loading: !restoreAuthenticationTaskCompleted$.value,
+      });
       this.forceUpdate();
     });
 
@@ -37,10 +45,32 @@ class App extends Component {
           {this.state.isLoggedIn && !this.state.loading ? (
             <button onClick={logout}>Logout</button>
           ) : null}
+          {this.state.isLoggedIn && !this.state.loading ? (
+            <button onClick={this.signAMessage}>Sign message</button>
+          ) : null}
+          {this.state.isLoggedIn && !this.state.loading ? (
+            <button onClick={this.sendSignedTransaction}>
+              Send signed transaction
+            </button>
+          ) : null}
           {this.state.isLoggedIn ? <WalletFollower /> : null}
         </header>
       </div>
     );
+  }
+
+  async signAMessage() {
+    const signature = await signAMessage('TESTME');
+    console.log('Sign message complete. sig -', signature);
+  }
+
+  async sendSignedTransaction() {
+    const signature = await sendTransaction({
+      to: '0x45Cd08334aeedd8a06265B2Ae302E3597d8fAA28',
+      value: '0x00', // 0x38d7ea4c68000 if you want to add some value 0.002 ETH
+    });
+
+    console.log('Send signed transaction complete. sig -', signature);
   }
 }
 
