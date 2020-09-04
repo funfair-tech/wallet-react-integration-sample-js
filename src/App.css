@@ -37,6 +37,10 @@
   width: 100%;
 }
 
+.action-buttons button {
+  margin-left: 10px;
+}
+
 button {
   background: linear-gradient(to bottom, #f7a2c6 0%, #ea166f 2px, #bc1159 100%);
   color: #fff;

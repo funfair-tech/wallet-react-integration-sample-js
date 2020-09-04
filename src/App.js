@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
+import LoggedInActions from './components/logged-in-actions/Logged-In-Actions';
+import LoggedOutActions from './components/logged-out-actions/Logged-Out-Actions';
 import logo from './logo.svg';
 import {
   isAuthenticated$,
   restoreAuthenticationTaskCompleted$,
 } from './services/store';
-import {
-  login,
-  logout,
-  sendTransaction,
-  signAMessage,
-} from './services/wallet-service';
 import WalletFollower from './Wallet-Follower';
 
 class App extends Component {
@@ -41,39 +37,19 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          {this.state.loading ? <p>Loading please wait</p> : null}
-          {!this.state.isLoggedIn && !this.state.loading ? (
-            <button onClick={login}>Login</button>
-          ) : null}
-          {this.state.isLoggedIn && !this.state.loading ? (
-            <button onClick={logout}>Logout</button>
-          ) : null}
-          {this.state.isLoggedIn && !this.state.loading ? (
-            <button onClick={this.signAMessage}>Sign message</button>
-          ) : null}
-          {this.state.isLoggedIn && !this.state.loading ? (
-            <button onClick={this.sendSignedTransaction}>
-              Send signed transaction
-            </button>
-          ) : null}
+          <div className="action-buttons">
+            {this.state.loading ? <p>Loading please wait</p> : null}
+            {!this.state.isLoggedIn && !this.state.loading ? (
+              <LoggedInActions />
+            ) : null}
+            {this.state.isLoggedIn && !this.state.loading ? (
+              <LoggedOutActions />
+            ) : null}
+          </div>
           {this.state.isLoggedIn ? <WalletFollower /> : null}
         </header>
       </div>
     );
-  }
-
-  async signAMessage() {
-    const signature = await signAMessage('TESTME');
-    console.log('Sign message complete. sig -', signature);
-  }
-
-  async sendSignedTransaction() {
-    const signature = await sendTransaction({
-      to: '0x45Cd08334aeedd8a06265B2Ae302E3597d8fAA28',
-      value: '0x00', // 0x38d7ea4c68000 if you want to add some value 0.002 ETH
-    });
-
-    console.log('Send signed transaction complete. sig -', signature);
   }
 }
 
