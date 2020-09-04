@@ -15,7 +15,7 @@ export function registerEventListeners() {
   });
 
   // https://funfair-tech.github.io/fun-wallet-docs/guide/web-sdk/sdk-event-listeners.html#list-of-all-available-listeners
-  // register all the other events your intrested in here...
+  // register all the other events your interested in here...
 }
 
 export function login() {
