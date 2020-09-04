@@ -17,6 +17,9 @@ class App extends Component {
   constructor(props) {
     super();
     this.state = { isLoggedIn: false, loading: true };
+  }
+
+  componentDidMount() {
     isAuthenticated$.subscribe((value) => {
       this.setState({
         isLoggedIn: value,
