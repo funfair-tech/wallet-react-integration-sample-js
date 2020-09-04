@@ -3,18 +3,20 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  /* height: 40vmin; */
   pointer-events: none;
+  width: 200px;
+  height: 100px;
 }
-
+/* 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 .App-header {
-  background-color: #282c34;
+  background-color: #242424;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +37,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.wallet-follower {
+  width: 100%;
 }
