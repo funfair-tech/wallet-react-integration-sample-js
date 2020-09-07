@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import './Wallet-Follower.css';
 
 class WalletFollower extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     let url = window.funwallet.getWalletFollowerURL();
     if (!this.props.page) {
@@ -13,16 +17,12 @@ class WalletFollower extends Component {
         <iframe
           id="fun-wallet-follower"
           src={url}
-          onLoad={this.yourFollowerInstanceLoadFunction}
+          onLoad={this.props.onload}
           is-fun-wallet="true"
           is-follower="true"
         ></iframe>
       </div>
     );
-  }
-
-  async yourFollowerInstanceLoadFunction() {
-    await window.funwallet.sdk.registerFollowerInstance();
   }
 
   updateRouteToValue(url, page) {

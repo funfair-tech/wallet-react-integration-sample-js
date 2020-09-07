@@ -11,8 +11,9 @@ import WalletFollower from './Wallet-Follower';
 
 class App extends Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = { isLoggedIn: false, loading: true };
+    this.followerLoaded = this.followerLoaded.bind(this);
   }
 
   componentDidMount() {
@@ -46,10 +47,16 @@ class App extends Component {
               <LoggedInActions />
             ) : null}
           </div>
-          {this.state.isLoggedIn ? <WalletFollower page="/funds" /> : null}
+          {this.state.isLoggedIn ? (
+            <WalletFollower onload={this.followerLoaded} page="/funds" />
+          ) : null}
         </header>
       </div>
     );
+  }
+
+  async followerLoaded() {
+    await window.funwallet.sdk.registerFollowerInstance();
   }
 }
 

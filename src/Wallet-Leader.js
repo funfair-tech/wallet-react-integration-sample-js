@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
-import { registerEventListeners } from './services/wallet-service';
 import './Wallet-Leader.css';
 
 class WalletLeader extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <div className="wallet-leader">
@@ -13,7 +16,7 @@ class WalletLeader extends Component {
               id="funwallet-iframe"
               is-fun-wallet="true"
               is-leader="true"
-              onLoad={this.yourLeaderInstanceLoadFunction}
+              onLoad={this.props.onload}
               frameBorder="0"
             ></iframe>
           </div>
@@ -21,12 +24,6 @@ class WalletLeader extends Component {
         <div id="fun-wallet-darken"></div>
       </div>
     );
-  }
-
-  yourLeaderInstanceLoadFunction() {
-    window.funwallet.sdk.init();
-
-    registerEventListeners();
   }
 }
 

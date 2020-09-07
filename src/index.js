@@ -2,12 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
+import { registerEventListeners } from './services/wallet-service';
 import * as serviceWorker from './serviceWorker';
 import WalletLeader from './Wallet-Leader';
 
+const leaderLoaded = () => {
+  window.funwallet.sdk.init();
+
+  registerEventListeners();
+};
+
 ReactDOM.render(
   <React.StrictMode>
-    <WalletLeader />
+    <WalletLeader onload={leaderLoaded} />
     <App />
   </React.StrictMode>,
   document.getElementById('root')
