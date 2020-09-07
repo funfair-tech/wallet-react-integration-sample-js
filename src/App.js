@@ -40,10 +40,10 @@ class App extends Component {
           <div className="action-buttons">
             {this.state.loading ? <p>Loading please wait</p> : null}
             {!this.state.isLoggedIn && !this.state.loading ? (
-              <LoggedInActions />
+              <LoggedOutActions />
             ) : null}
             {this.state.isLoggedIn && !this.state.loading ? (
-              <LoggedOutActions />
+              <LoggedInActions />
             ) : null}
           </div>
           {this.state.isLoggedIn ? <WalletFollower /> : null}
