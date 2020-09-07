@@ -5,7 +5,7 @@ import './Logged-Out-Actions.css';
 class LoggedOutActions extends Component {
   render() {
     return (
-      <div class="logged-in">
+      <div className="logged-in">
         <button onClick={login}>Login</button>
       </div>
     );

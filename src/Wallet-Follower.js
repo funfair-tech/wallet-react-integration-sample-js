@@ -3,7 +3,11 @@ import './Wallet-Follower.css';
 
 class WalletFollower extends Component {
   render() {
-    const url = window.funwallet.getWalletFollowerURL();
+    let url = window.funwallet.getWalletFollowerURL();
+    if (!this.props.page) {
+      url = this.updateRouteToValue(url, this.props.page);
+    }
+
     return (
       <div className="wallet-follower">
         <iframe
@@ -19,6 +23,13 @@ class WalletFollower extends Component {
 
   async yourFollowerInstanceLoadFunction() {
     await window.funwallet.sdk.registerFollowerInstance();
+  }
+
+  updateRouteToValue(url, page) {
+    const walletUri = new URL(url);
+    const searchParams = new URLSearchParams(walletUri.search);
+    searchParams.set('routeTo', window.funwallet.formatRouterToValue(page));
+    return walletUri.pathname + '?' + searchParams.toString();
   }
 }
 
