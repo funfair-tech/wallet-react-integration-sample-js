@@ -1,10 +1,10 @@
+import { WalletLeader } from '@funfair-tech/wallet-react';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
 import { registerEventListeners } from './services/wallet-service';
 import * as serviceWorker from './serviceWorker';
-import WalletLeader from './Wallet-Leader';
 
 const leaderLoaded = () => {
   window.funwallet.sdk.init();
