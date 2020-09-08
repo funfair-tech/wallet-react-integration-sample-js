@@ -35,7 +35,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        <div className="App-container">
           <img src={logo} className="App-logo" alt="logo" />
           <div className="action-buttons">
             {this.state.loading ? <p>Loading please wait</p> : null}
@@ -47,7 +47,7 @@ class App extends Component {
             ) : null}
           </div>
           {this.state.isLoggedIn ? <WalletFollower page="/funds" /> : null}
-        </header>
+        </div>
       </div>
     );
   }

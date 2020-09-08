@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  padding-bottom: 75px;
+  background-color: #242424;
 }
 
 .App-logo {
@@ -8,8 +10,7 @@
   height: 100px;
 }
 
-.App-header {
-  background-color: #242424;
+.App-container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
