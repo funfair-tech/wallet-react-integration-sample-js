@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/funfair-tech/wallet-react-integration-sample-js/static/css/main.fab01b89.chunk.css",
-    "main.js": "/funfair-tech/wallet-react-integration-sample-js/static/js/main.2812e716.chunk.js",
-    "main.js.map": "/funfair-tech/wallet-react-integration-sample-js/static/js/main.2812e716.chunk.js.map",
-    "runtime-main.js": "/funfair-tech/wallet-react-integration-sample-js/static/js/runtime-main.06494498.js",
-    "runtime-main.js.map": "/funfair-tech/wallet-react-integration-sample-js/static/js/runtime-main.06494498.js.map",
-    "static/js/2.096b568e.chunk.js": "/funfair-tech/wallet-react-integration-sample-js/static/js/2.096b568e.chunk.js",
-    "static/js/2.096b568e.chunk.js.map": "/funfair-tech/wallet-react-integration-sample-js/static/js/2.096b568e.chunk.js.map",
-    "index.html": "/funfair-tech/wallet-react-integration-sample-js/index.html",
-    "precache-manifest.dcd2c4aac76f8837419e11a5df85f70f.js": "/funfair-tech/wallet-react-integration-sample-js/precache-manifest.dcd2c4aac76f8837419e11a5df85f70f.js",
-    "service-worker.js": "/funfair-tech/wallet-react-integration-sample-js/service-worker.js",
-    "static/css/main.fab01b89.chunk.css.map": "/funfair-tech/wallet-react-integration-sample-js/static/css/main.fab01b89.chunk.css.map",
-    "static/js/2.096b568e.chunk.js.LICENSE.txt": "/funfair-tech/wallet-react-integration-sample-js/static/js/2.096b568e.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/funfair-tech/wallet-react-integration-sample-js/static/media/logo.02850c4c.svg"
+    "main.css": "/static/css/main.fab01b89.chunk.css",
+    "main.js": "/static/js/main.f475e62f.chunk.js",
+    "main.js.map": "/static/js/main.f475e62f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f6028ede.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f6028ede.js.map",
+    "static/js/2.517a5be8.chunk.js": "/static/js/2.517a5be8.chunk.js",
+    "static/js/2.517a5be8.chunk.js.map": "/static/js/2.517a5be8.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.8e9928351f0b2a16c7c7f447648f6207.js": "/precache-manifest.8e9928351f0b2a16c7c7f447648f6207.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.fab01b89.chunk.css.map": "/static/css/main.fab01b89.chunk.css.map",
+    "static/js/2.517a5be8.chunk.js.LICENSE.txt": "/static/js/2.517a5be8.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/static/media/logo.02850c4c.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.06494498.js",
-    "static/js/2.096b568e.chunk.js",
+    "static/js/runtime-main.f6028ede.js",
+    "static/js/2.517a5be8.chunk.js",
     "static/css/main.fab01b89.chunk.css",
-    "static/js/main.2812e716.chunk.js"
+    "static/js/main.f475e62f.chunk.js"
   ]
 }
