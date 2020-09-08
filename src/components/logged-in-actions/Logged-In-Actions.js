@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {
   logout,
+  openKycProcess,
   sendTransaction,
   signAMessage,
 } from '../../services/wallet-service';
@@ -14,6 +15,7 @@ class LoggedInActions extends Component {
         <button onClick={this.sendSignedTransaction}>
           Send signed transaction
         </button>
+        <button onClick={openKycProcess}>Start KYC</button>
         <button onClick={logout}>Logout</button>
       </div>
     );

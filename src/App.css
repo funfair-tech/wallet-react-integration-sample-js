@@ -41,6 +41,20 @@
   margin-left: 10px;
 }
 
+.action-buttons {
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 510px) {
+  .action-buttons .logged-out {
+    display: grid;
+  }
+
+  .action-buttons button {
+    margin-bottom: 10px;
+  }
+}
+
 button {
   background: linear-gradient(to bottom, #f7a2c6 0%, #ea166f 2px, #bc1159 100%);
   color: #fff;

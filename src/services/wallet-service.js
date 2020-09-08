@@ -14,6 +14,25 @@ export function registerEventListeners() {
     }
   });
 
+  window.funwallet.sdk.on('isKycVerified', (result) => {
+    if (result.origin === 'https://wallet.funfair.io') {
+      if (!result.data.isVerified) {
+        window.funwallet.sdk.showFunWalletModal();
+      } else {
+        window.funwallet.sdk.hideFunWalletModal();
+      }
+    }
+  });
+
+  // TODO REMOVE THIS TO BE INTERNAL VIA SDK
+  window.funwallet.sdk.on('kycProcessCancelled', (result) => {
+    if (result.origin === 'https://wallet.funfair.io') {
+      if (result.data.cancelled) {
+        window.funwallet.sdk.hideFunWalletModal();
+      }
+    }
+  });
+
   // https://funfair-tech.github.io/fun-wallet-docs/guide/web-sdk/sdk-event-listeners.html#list-of-all-available-listeners
   // register all the other events your interested in here...
 }
@@ -60,4 +79,8 @@ export async function sendTransaction(tx) {
     .on('error', async (error) => {
       console.log(error.message, error);
     });
+}
+
+export async function openKycProcess() {
+  await window.funwallet.sdk.kycModalOpen();
 }
