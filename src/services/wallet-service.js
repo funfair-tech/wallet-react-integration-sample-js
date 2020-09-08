@@ -19,6 +19,9 @@ export function registerEventListeners() {
       if (!result.data.isVerified) {
         window.funwallet.sdk.showFunWalletModal();
       } else {
+        // maybe show some kind of error message as in theory
+        // your client should not be showing ability to popup KYC
+        // when they are already verified
         window.funwallet.sdk.hideFunWalletModal();
       }
     }
