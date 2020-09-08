@@ -29,11 +29,12 @@ export function registerEventListeners() {
     }
   });
 
-  // TODO REMOVE THIS TO BE INTERNAL VIA SDK
   window.funwallet.sdk.on('kycProcessCancelled', (result) => {
     if (result.origin === 'https://wallet.funfair.io') {
       if (result.data.cancelled) {
         window.funwallet.sdk.hideFunWalletModal();
+        // you may want to move routes etc here hence why you hook onto this action
+        // and the sdk does not
       }
     }
   });
