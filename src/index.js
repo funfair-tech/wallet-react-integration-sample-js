@@ -6,15 +6,9 @@ import './index.css';
 import { registerEventListeners } from './services/wallet-service';
 import * as serviceWorker from './serviceWorker';
 
-const leaderLoaded = () => {
-  window.funwallet.sdk.init();
-
-  registerEventListeners();
-};
-
 ReactDOM.render(
   <React.StrictMode>
-    <WalletLeader onload={leaderLoaded} />
+    <WalletLeader registerEventListeners={registerEventListeners} />
     <App />
   </React.StrictMode>,
   document.getElementById('root')
