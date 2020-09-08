@@ -22,7 +22,9 @@ export function registerEventListeners() {
         // maybe show some kind of error message as in theory
         // your client should not be showing ability to popup KYC
         // when they are already verified
-        window.funwallet.sdk.hideFunWalletModal();
+        console.error(
+          'Your client should not show the kyc logic if already kyced'
+        );
       }
     }
   });
