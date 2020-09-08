@@ -1,20 +1,27 @@
+import { MessageListeners } from '@funfair-tech/wallet-sdk';
 import Web3 from 'web3';
 import { isAuthenticated$, restoreAuthenticationTaskCompleted$ } from './store';
 
 export function registerEventListeners() {
-  window.funwallet.sdk.on('authenticationCompleted', (result) => {
-    if (result.origin === 'https://wallet.funfair.io') {
-      isAuthenticated$.next(true);
+  window.funwallet.sdk.on(
+    MessageListeners.authenticationCompleted,
+    (result) => {
+      if (result.origin === 'https://wallet.funfair.io') {
+        isAuthenticated$.next(true);
+      }
     }
-  });
+  );
 
-  window.funwallet.sdk.on('restoreAuthenticationCompleted', (result) => {
-    if (result.origin === 'https://wallet.funfair.io') {
-      restoreAuthenticationTaskCompleted$.next(true);
+  window.funwallet.sdk.on(
+    MessageListeners.restoreAuthenticationCompleted,
+    (result) => {
+      if (result.origin === 'https://wallet.funfair.io') {
+        restoreAuthenticationTaskCompleted$.next(true);
+      }
     }
-  });
+  );
 
-  window.funwallet.sdk.on('isKycVerified', (result) => {
+  window.funwallet.sdk.on(MessageListeners.isKycVerified, (result) => {
     if (result.origin === 'https://wallet.funfair.io') {
       if (!result.data.isVerified) {
         window.funwallet.sdk.showFunWalletModal();
@@ -29,7 +36,7 @@ export function registerEventListeners() {
     }
   });
 
-  window.funwallet.sdk.on('kycProcessCancelled', (result) => {
+  window.funwallet.sdk.on(MessageListeners.kycProcessCancelled, (result) => {
     if (result.origin === 'https://wallet.funfair.io') {
       if (result.data.cancelled) {
         window.funwallet.sdk.hideFunWalletModal();
