@@ -17,8 +17,11 @@
   },
   "scripts": {
     "start": "set PORT=3001 && react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build && cp build/index.html build/404.html",
+    "predeploy": "set PUBLIC_URL=https://funfair-tech.github.io/wallet-react-integration-sample-js/&&npm run build",
+    "deploy": "gh-pages -d build"
   },
+  "homepage": "https://github.com/funfair-tech/wallet-react-integration-sample-js",
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -33,5 +36,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
   }
 }
