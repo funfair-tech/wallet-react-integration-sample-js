@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1a94b9bc8f546afe4d8813ee94821e9a",
+    "revision": "d8b97534bea2376a53a51ce17d676e2a",
     "url": "https://funfair-tech.github.io/wallet-react-integration-sample-js/index.html"
   },
   {
-    "revision": "dc5f40f7aed7c1f3e017",
-    "url": "https://funfair-tech.github.io/wallet-react-integration-sample-js/static/css/main.911f862c.chunk.css"
+    "revision": "14241f2c2d7331c48d24",
+    "url": "https://funfair-tech.github.io/wallet-react-integration-sample-js/static/css/main.d453cc98.chunk.css"
   },
   {
     "revision": "9588b173569dae2f3427",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://funfair-tech.github.io/wallet-react-integration-sample-js/static/js/2.7952bed5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "dc5f40f7aed7c1f3e017",
-    "url": "https://funfair-tech.github.io/wallet-react-integration-sample-js/static/js/main.6ed6e906.chunk.js"
+    "revision": "14241f2c2d7331c48d24",
+    "url": "https://funfair-tech.github.io/wallet-react-integration-sample-js/static/js/main.525310d1.chunk.js"
   },
   {
     "revision": "e2cbc4027120c793057d",
