@@ -16,7 +16,7 @@
     "web3": "^1.2.11"
   },
   "scripts": {
-    "start": "set PORT=3001 && react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build && cp build/index.html build/404.html",
     "predeploy": "set PUBLIC_URL=https://funfair-tech.github.io/wallet-react-integration-sample-js/&&npm run build",
     "deploy": "gh-pages -d build"
