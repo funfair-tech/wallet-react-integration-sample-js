@@ -7,7 +7,8 @@ Full documentation is available on how you can integrate is [here](https://funfa
 ## Install
 
 ```bash
-$ npm install $ npm start
+$ npm install
+$ npm start
 ```
 
 This will load the app on http://localhost:3001
