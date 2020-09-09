@@ -47,7 +47,7 @@
 }
 
 @media only screen and (max-width: 510px) {
-  .action-buttons .logged-out {
+  .action-buttons .logged-in {
     display: grid;
   }
 

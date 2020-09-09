@@ -10,7 +10,7 @@ import './Logged-In-Actions.css';
 class LoggedInActions extends Component {
   render() {
     return (
-      <div className="logged-out">
+      <div className="logged-in">
         <button onClick={this.signAMessage}>Sign message</button>
         <button onClick={this.sendSignedTransaction}>
           Send signed transaction
