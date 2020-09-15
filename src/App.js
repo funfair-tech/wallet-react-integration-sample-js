@@ -37,8 +37,8 @@ class App extends Component {
       <div className="App">
         <div className="App-container">
           <img src={logo} className="App-logo" alt="logo" />
+          {this.state.loading ? <p>Loading please wait</p> : null}
           <div className="action-buttons">
-            {this.state.loading ? <p>Loading please wait</p> : null}
             {!this.state.isLoggedIn && !this.state.loading ? (
               <LoggedOutActions />
             ) : null}
@@ -46,7 +46,11 @@ class App extends Component {
               <LoggedInActions />
             ) : null}
           </div>
-          {this.state.isLoggedIn ? <WalletFollower page="/funds" /> : null}
+          {this.state.isLoggedIn ? (
+            <div class="wallet-follower">
+              <WalletFollower page="/funds" />{' '}
+            </div>
+          ) : null}
         </div>
       </div>
     );

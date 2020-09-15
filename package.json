@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@funfair-tech/wallet-react": "^1.0.2",
+    "@funfair-tech/wallet-react": "^1.0.4",
     "@funfair-tech/wallet-sdk": "^2.1.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
