@@ -48,7 +48,7 @@ class App extends Component {
           </div>
           {this.state.isLoggedIn ? (
             <div class="wallet-follower">
-              <WalletFollower page="/funds" />{' '}
+              <WalletFollower page="/funds" />
             </div>
           ) : null}
         </div>
