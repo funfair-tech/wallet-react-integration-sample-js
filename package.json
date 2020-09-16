@@ -4,11 +4,10 @@
   "private": true,
   "dependencies": {
     "@funfair-tech/wallet-react": "^1.0.4",
-    "@funfair-tech/wallet-sdk": "^2.1.0",
+    "@funfair-tech/wallet-sdk": "^2.2.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
-    "post-robot": "^9.0.36",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
