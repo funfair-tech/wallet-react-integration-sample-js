@@ -8,19 +8,6 @@ import {
 import './Logged-In-Actions.css';
 
 class LoggedInActions extends Component {
-  render() {
-    return (
-      <div className="logged-in">
-        <button onClick={this.signAMessage}>Sign message</button>
-        <button onClick={this.sendSignedTransaction}>
-          Send signed transaction
-        </button>
-        <button onClick={openKycProcess}>Start KYC</button>
-        <button onClick={logout}>Logout</button>
-      </div>
-    );
-  }
-
   async signAMessage() {
     const signature = await signAMessage('TESTME');
     console.log('Sign message complete. sig -', signature);
@@ -33,6 +20,19 @@ class LoggedInActions extends Component {
     });
 
     console.log('Send signed transaction complete. sig -', signature);
+  }
+
+  render() {
+    return (
+      <div className="logged-in">
+        <button onClick={this.signAMessage}>Sign message</button>
+        <button onClick={this.sendSignedTransaction}>
+          Send signed transaction
+        </button>
+        <button onClick={openKycProcess}>Start KYC</button>
+        <button onClick={logout}>Logout</button>
+      </div>
+    );
   }
 }
 
