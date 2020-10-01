@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "https://funfair-tech.github.io/wallet-react-integration-sample-js/static/css/main.81718dea.chunk.css",
-    "main.js": "https://funfair-tech.github.io/wallet-react-integration-sample-js/static/js/main.81dab373.chunk.js",
-    "main.js.map": "https://funfair-tech.github.io/wallet-react-integration-sample-js/static/js/main.81dab373.chunk.js.map",
+    "main.js": "https://funfair-tech.github.io/wallet-react-integration-sample-js/static/js/main.a5ca3826.chunk.js",
+    "main.js.map": "https://funfair-tech.github.io/wallet-react-integration-sample-js/static/js/main.a5ca3826.chunk.js.map",
     "runtime-main.js": "https://funfair-tech.github.io/wallet-react-integration-sample-js/static/js/runtime-main.0339787b.js",
     "runtime-main.js.map": "https://funfair-tech.github.io/wallet-react-integration-sample-js/static/js/runtime-main.0339787b.js.map",
     "static/js/2.3b02ac0b.chunk.js": "https://funfair-tech.github.io/wallet-react-integration-sample-js/static/js/2.3b02ac0b.chunk.js",
     "static/js/2.3b02ac0b.chunk.js.map": "https://funfair-tech.github.io/wallet-react-integration-sample-js/static/js/2.3b02ac0b.chunk.js.map",
     "index.html": "https://funfair-tech.github.io/wallet-react-integration-sample-js/index.html",
-    "precache-manifest.1d53b306cdc2c06b2c9daa080f59a0b7.js": "https://funfair-tech.github.io/wallet-react-integration-sample-js/precache-manifest.1d53b306cdc2c06b2c9daa080f59a0b7.js",
+    "precache-manifest.9c1dbacfbcab1723998a4bd40494ca34.js": "https://funfair-tech.github.io/wallet-react-integration-sample-js/precache-manifest.9c1dbacfbcab1723998a4bd40494ca34.js",
     "service-worker.js": "https://funfair-tech.github.io/wallet-react-integration-sample-js/service-worker.js",
     "static/css/main.81718dea.chunk.css.map": "https://funfair-tech.github.io/wallet-react-integration-sample-js/static/css/main.81718dea.chunk.css.map",
     "static/js/2.3b02ac0b.chunk.js.LICENSE.txt": "https://funfair-tech.github.io/wallet-react-integration-sample-js/static/js/2.3b02ac0b.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.0339787b.js",
     "static/js/2.3b02ac0b.chunk.js",
     "static/css/main.81718dea.chunk.css",
-    "static/js/main.81dab373.chunk.js"
+    "static/js/main.a5ca3826.chunk.js"
   ]
 }
