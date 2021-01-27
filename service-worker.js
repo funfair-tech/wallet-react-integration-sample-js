@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "https://funfair-tech.github.io/wallet-react-integration-sample-js/precache-manifest.9c1dbacfbcab1723998a4bd40494ca34.js"
+  "https://funfair-tech.github.io/wallet-react-integration-sample-js/precache-manifest.d0d5600e84e90aa4abb013226b2dec7a.js"
 );
 
 self.addEventListener('message', (event) => {
