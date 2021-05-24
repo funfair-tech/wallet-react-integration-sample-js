@@ -1,14 +1,17 @@
-import { WalletLeader } from '@funfair-tech/wallet-react';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
-import { registerEventListeners } from './services/wallet-service';
+import { lazyLoadFunWallet } from './services/wallet-service';
 import * as serviceWorker from './serviceWorker';
+
+// you call this method when you want to load the wallet
+// this can be on a button click or page load up to how
+// your dApp needs it to act
+lazyLoadFunWallet();
 
 ReactDOM.render(
   <React.StrictMode>
-    <WalletLeader registerEventListeners={registerEventListeners} />
     <App />
   </React.StrictMode>,
   document.getElementById('root')
